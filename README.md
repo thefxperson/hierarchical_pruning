@@ -34,6 +34,4 @@ Mu controls threshold overestimation for superblocks, where eta controls thresho
 ```
 ./target/release/search --index bp-msmarco-passage-unicoil-quantized.bmp --queries splade_queries.dev --k 1000 --mu 0.6 --eta 0.9 --beta 0.95 > res.trec
 ```
-
-#### Known Issues
-If superblock pruning is too aggressive and prunes every superblock, search will crash. Annecdotally, this tends to occurs with mu values below 0.4 on MS MARCO with SPLADE, though it varies by dataset and embedding. We hope to address this limitation in future work.
+For this code release, we assume that $\mu$ is above 0.4.
